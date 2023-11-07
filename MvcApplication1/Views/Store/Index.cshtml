@@ -1,0 +1,13 @@
+﻿@model IEnumerable<MvcApplication1.Models.Genre>
+@{
+ViewBag.Title = "Tienda";
+}
+<h3>Buscar Géneros</h3>
+<p>
+Selecciona entre los @Model.Count() generos:</p>
+<ul>
+    @foreach (var genre in Model)
+{
+<li>@Html.ActionLink(genre.Name, "Browse", new { genre = genre.Name })</li>
+}
+</ul>

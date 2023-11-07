@@ -1,0 +1,16 @@
+﻿@model MvcApplication1.Models.Album
+
+@{
+ViewBag.Title = "Delete";
+}
+<h2>Confirmar Eliminación</h2>
+<p>¿Está seguro de que desea eliminar el álbum titulado <strong>@Model.Title</strong>?
+</p>
+@using (Html.BeginForm()) {
+<p>
+<input type="submit" value="Eliminar" />
+</p>
+<p>
+@Html.ActionLink("Regresa a la lista", "Index")
+</p>
+}
